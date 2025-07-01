@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo Peru</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Turismo Peru ✈</h1>
+
+    <input type="checkbox" id="menu-toggle" placeholder="contacto">
+    <label for="menu-toggle" class="menu-icon">
+        <i class="fas fa-bars"></i>
+    </label>
+
+    <nav class="menu">
+        <a href="#destinos">DESTINOS</a>
+        <a href="#contacto">CONTACTOS</a>
+    </nav>
+</header> 
+
+<main>
+<section id="intro">
+    <h2>Descubre el Peru Magico</h2>
+    <p>Explora Macchu Picchu, la Amazonia y mas lugares impresionantes.</p>
+<button class="btn-reserva">Reserva tu Viaje</button>
+</section>
+
+<section id="destinos">
+    <div class="card">
+        <img src="https://i.pinimg.com/736x/ff/0e/4c/ff0e4ca0bdc883094d7c219f129c0dce.jpg">
+        <h3>Macchu Picchu</h3>
+    </div>
+    <div class="card">
+        <img src="https://i.pinimg.com/736x/5b/63/7e/5b637e5d36645aa317daefa9d242d5d5.jpg">
+        <h3>Amazonas</h3>
+    </div>
+    <div class="card">
+        <img src="https://i.pinimg.com/736x/18/1d/bf/181dbf2a8b36bd8bba6d750a71da6e31.jpg">
+        <h3>Huacachina</h3>
+    </div>
+</section>
+</main>
+
+<footer>
+<p><span class="texto-rojo">Sígueme en:</span></p>
+<div class="redes">
+    <a href="#">Facebook <i class="fab fa-facebook"></i></a>
+    <a href="#">Instagram <i class="fab fa-instagram"></i></a>
+    <a href="#">Youtube <i class="fab fa-youtube"></i></a>
+</div>
+<p>© 2025 Turismo Peru Everson Solorzano</p>
+</footer>
+
+
+<!--Formulario flotante-->
+<div class="form-flotante" id="contacto">
+    <h3>Contactanos</h3>
+    <form>
+        <input type="text" placeholder="Tu nombre" required>
+        <input type="email" placeholder="correo" required>
+        <textarea placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
+<a href="#" class="whatsapp-icon" onclick="abrirChat(event)">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Ventana de chat flotante -->
+<div class="chat-flotante" id="chatFlotante">
+<h3>Hola 👋🏼</h3>
+<p>¿En qué podemos ayudarte?</p>
+<textarea placeholder="Escribe tu mensaje..."></textarea>
+<button>Enviar</button>
+</div>
+
+<!-- Script -->
+<script>
+function abrirChat(event) {
+    event.preventDefault(); // evita que se redireccione
+    const chat = document.getElementById('chatFlotante');
+    chat.style.display = 'block'; // muestra el chat
+}
+</script>
+
+</body>
+</div>
+
+</body>
+</html>

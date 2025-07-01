@@ -1,0 +1,232 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: aliceblue;
+    color: rgb(68, 73, 44);
+}
+header{
+    background: rgb(128, 250, 13);
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+header h1{ font-size: 24px;}
+    .menu{
+        display: flex;
+        gap: 20px;
+    }
+.menu a{
+    color: rgb(0, 0, 0);
+    text-decoration:   rgb(97, 39, 89);
+    font-weight: bold;
+}
+#menu-toggle{
+    display: none;
+}
+.menu-icon{
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+}
+#intro{
+    text-align: center;
+    padding: 40px;
+    background: rgb(111, 217, 243);
+}
+.btn-reserva{
+    padding: 15px 30px;
+    background: rgb(0, 168, 197);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+.btn-reserva:hover{
+    transform: scale(1.1);
+    background: aqua;
+}
+#destinos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+}
+.card{
+    background: rgb(0, 168, 197);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 400px;
+    box-shadow: 0 6px 20px rgb(0, 0, 0);
+    transition: transform 0.4s, opacity 0,4s;
+}
+.card img{
+    width: 100%;
+    transition: transform 0.8s ease;
+}
+.card img:hover{
+    transform: scale(1.05);
+}
+.card h3{
+    text-align: center;
+    padding: 10px;
+}
+.card:hover{
+    transform: translateY(-8px);
+}
+footer{
+    background: rgb(0, 168, 197);
+    color: rgb(209, 209, 226);
+    text-align: center;
+    padding: 20px;
+}
+.redes a{
+    font-size: 24px;
+    margin: 0 12px;
+    color: rgb(255, 255, 255);
+    transition: transform 0.3s,color 0.3s;
+}
+.redes a:hover{
+    transform: scale(1.2);
+    color: rgb(255, 1, 191);
+}
+.form-flotante{
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: rgb(30, 207, 169);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 6px 20px rgb(255, 255, 255);
+    width: 280px;
+}
+.form-flotante h3{
+    margin: 0 0 10px;
+}
+.form-flotante input
+.form-flotante textarea
+.form-flotante button{
+    width: 100%;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #0f0e0e;
+}
+.form-flotante button:hover{
+    background: chartreuse;
+}
+@keyframes bounce{
+    0%,100%{transform: translateY(0);}
+    50%{transform: translateY(0);}
+}
+/* Botón flotante de WhatsApp */
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25ee13;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 60px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.whatsapp-icon:hover {
+  background: #128C7E;
+  transform: scale(1.1);
+}
+.whatsapp{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(2, 94, 40);
+    color: rgb(15, 15, 14);
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0,0.3);
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    z-index: 999;
+}
+#chat-toggle{
+    display: none;
+}
+.chat-flotante{
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: rgb(30, 207, 169);
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0,0.3);
+    width: 260px;
+    display: none;
+    z-index: 999;
+}
+.chat-flotante h3{
+    margin: 0 0 8px;
+}
+.chat-flotante p{
+    margin: 0 0 10px;
+    font-size: 14px;
+}
+.chat-flotante textarea{
+    width: 100%;
+    height: 60px;
+    border-radius: 6px;
+    border: 1px solid#0c0a0a;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+.chat-flotante button{
+    width: 100%;
+    background: rgb(255, 255, 255);
+    color:  rgb(22, 13, 13);
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.chat-flotante button:hover{
+    background: rgb(9, 10, 10);
+}
+#chat-toggle:checked + .whatsapp + .chat-flotante{
+    display: block;
+}
+@media(max-width: 768px){
+    .menu{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: rgb(14, 206, 190);
+        padding: 10px;
+        border-radius: 8px;
+        }
+    #menu-toggle:checked + .menu-icon + .menu{
+        display: flex;
+    }
+    .menu-icon{
+        display: block;
+    }
+    #destinos{
+        flex-direction: column;
+        align-items: center;
+    }
+}
